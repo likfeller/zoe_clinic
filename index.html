@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Zoé Clinic — Shëndeti i fëmijëve, prioriteti ynë</title>
+  <meta name="description" content="Zoé Clinic — klinikë e fizioterapisë dhe rehabilitimit për fëmijë. Terapi fizikale, hidroterapi, DMI dhe terapi e punës." />
+  <link rel="icon" type="image/jpeg" href="media/profile.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Nunito:wght@400;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- Fixed, single-logo brand background (crisp vector, stays put on scroll) -->
+  <div id="bg" aria-hidden="true">
+    <div class="bg-logo">
+      <div class="bg-logo-row">
+        <span>Z</span>
+        <svg class="bg-emblem" viewBox="0 0 100 100" fill="none" stroke="currentColor" aria-hidden="true">
+          <circle cx="50" cy="52" r="39" stroke-width="4"/>
+          <ellipse cx="50" cy="52" rx="15" ry="39" stroke-width="2.2" opacity=".5"/>
+          <!-- the kid: big head, chunky body, arms reaching up, legs apart -->
+          <g fill="currentColor" stroke="none">
+            <circle cx="50" cy="27" r="9.5"/>
+            <rect x="43" y="37" width="14" height="24" rx="7"/>
+          </g>
+          <g fill="none" stroke-width="10" stroke-linecap="round">
+            <path d="M50 44 L34 32"/>
+            <path d="M50 44 L66 32"/>
+            <path d="M46 58 L41 77"/>
+            <path d="M54 58 L59 77"/>
+          </g>
+        </svg>
+        <span>É</span>
+      </div>
+      <div class="bg-clinic">CLINIC</div>
+    </div>
+  </div>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand" aria-label="Zoé Clinic">
+        <img src="media/profile.jpg" alt="Zoé Clinic" class="brand-logo" />
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#services" data-sq="Shërbimet" data-en="Services">Shërbimet</a>
+        <a href="#action" data-sq="Në veprim" data-en="In action">Në veprim</a>
+        <a href="#approach" data-sq="Qasja jonë" data-en="Our approach">Qasja jonë</a>
+        <a href="#team" data-sq="Ekipi" data-en="Team">Ekipi</a>
+        <a href="#contact" data-sq="Kontakti" data-en="Contact">Kontakti</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+          <span class="lang-opt active" data-lang="sq">SQ</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-opt" data-lang="en">EN</span>
+        </button>
+        <a href="#contact" class="btn btn-primary btn-sm" data-sq="Rezervo" data-en="Book now">Rezervo</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== HERO ===================== -->
+  <section class="hero" id="hero">
+    <div class="hero-bg"></div>
+    <div class="container hero-inner">
+      <div class="hero-copy reveal">
+        <span class="eyebrow" data-sq="Fizioterapi &amp; rehabilitim për fëmijë" data-en="Pediatric physiotherapy &amp; rehabilitation">Fizioterapi &amp; rehabilitim për fëmijë</span>
+        <h1 data-sq="Shëndeti i fëmijëve, prioriteti ynë." data-en="Children's health, our priority.">Shëndeti i fëmijëve, prioriteti ynë.</h1>
+        <p class="hero-lead" data-sq="Në Zoé Clinic ofrojmë kujdes të specializuar dhe me zemër — terapi fizikale, hidroterapi, DMI dhe terapi e punës për çdo hap të zhvillimit të fëmijës suaj." data-en="At Zoé Clinic we offer specialized, heartfelt care — physical therapy, hydrotherapy, DMI and occupational therapy for every step of your child's development.">
+          Në Zoé Clinic ofrojmë kujdes të specializuar dhe me zemër — terapi fizikale, hidroterapi, DMI dhe terapi e punës për çdo hap të zhvillimit të fëmijës suaj.
+        </p>
+        <div class="hero-cta">
+          <a href="#action" class="btn btn-ghost" data-sq="Shiko terapitë" data-en="See the therapies">Shiko terapitë ↓</a>
+        </div>
+        <div class="hero-stats">
+          <div><strong>4</strong><span data-sq="shërbime kryesore" data-en="core services">shërbime kryesore</span></div>
+          <div><strong>100%</strong><span data-sq="qasje me fokus te fëmija" data-en="child-focused care">qasje me fokus te fëmija</span></div>
+          <div><strong>1:1</strong><span data-sq="terapi e personalizuar" data-en="personalized therapy">terapi e personalizuar</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual reveal">
+        <!-- MEDIA SLOT: hero image/video. Drop your file at media/hero.jpg (or swap for <video>) -->
+        <div class="media-slot media-slot--hero" data-media="media/hero.jpg">
+          <div class="media-placeholder">
+            <span class="media-ico">▶</span>
+            <span data-sq="Foto / video e hero-s këtu" data-en="Hero photo / video here">Foto / video e hero-s këtu</span>
+            <small>media/hero.jpg</small>
+          </div>
+        </div>
+        <div class="hero-badge">
+          <span class="dot"></span>
+          <span data-sq="Me dashuri për çdo fëmijë" data-en="With love for every child">Me dashuri për çdo fëmijë</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-hint" aria-hidden="true"><span></span></div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section class="services" id="services">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker" data-sq="Shërbimet tona" data-en="Our services">Shërbimet tona</span>
+        <h2 data-sq="Kujdes i plotë nën një çati" data-en="Complete care under one roof">Kujdes i plotë nën një çati</h2>
+      </div>
+
+      <div class="service-grid">
+        <article class="service-card reveal">
+          <div class="service-ico">💪</div>
+          <h3 data-sq="Terapi Fizikale" data-en="Physical Therapy">Terapi Fizikale</h3>
+          <p data-sq="Forcimi i muskujve, përmirësimi i lëvizjes dhe i qëndrimit përmes ushtrimeve të personalizuara." data-en="Strengthening muscles, improving movement and posture through personalized exercises.">Forcimi i muskujve, përmirësimi i lëvizjes dhe i qëndrimit përmes ushtrimeve të personalizuara.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-ico">🏊</div>
+          <h3 data-sq="Hidroterapi" data-en="Hydrotherapy">Hidroterapi</h3>
+          <p data-sq="Terapi në ujë që lehtëson lëvizjen, redukton dhimbjen dhe e bën rehabilitimin argëtues." data-en="Water-based therapy that eases movement, reduces pain and makes rehab fun.">Terapi në ujë që lehtëson lëvizjen, redukton dhimbjen dhe e bën rehabilitimin argëtues.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-ico">🦵</div>
+          <h3 data-sq="DMI" data-en="DMI">DMI</h3>
+          <p data-sq="Dynamic Movement Intervention — teknika për të nxitur kontrollin motorik dhe zhvillimin funksional." data-en="Dynamic Movement Intervention — techniques to stimulate motor control and functional development.">Dynamic Movement Intervention — teknika për të nxitur kontrollin motorik dhe zhvillimin funksional.</p>
+        </article>
+
+        <article class="service-card reveal">
+          <div class="service-ico">🖐️</div>
+          <h3 data-sq="Terapi e Punës" data-en="Occupational Therapy">Terapi e Punës</h3>
+          <p data-sq="Aftësimi i fëmijës për aktivitetet e përditshme, pavarësinë dhe aftësitë fine motorike." data-en="Helping the child with daily activities, independence and fine motor skills.">Aftësimi i fëmijës për aktivitetet e përditshme, pavarësinë dhe aftësitë fine motorike.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== IN ACTION (scroll-reveal video/actions) ===================== -->
+  <section class="action" id="action">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker" data-sq="Në veprim" data-en="In action">Në veprim</span>
+        <h2 data-sq="Momente nga terapia jonë" data-en="Moments from our therapy">Momente nga terapia jonë</h2>
+        <p class="section-sub" data-sq="Zbrit poshtë për të parë terapitë tona të vërteta në veprim." data-en="Scroll down to see our real therapies in action.">Zbrit poshtë për të parë terapitë tona të vërteta në veprim.</p>
+      </div>
+
+      <div class="action-list">
+
+        <!-- Action 1 -->
+        <article class="action-row reveal">
+          <div class="action-media">
+            <div class="media-slot" data-media="media/action-1.mp4">
+              <div class="media-placeholder">
+                <span class="media-ico">▶</span>
+                <span data-sq="Video klip këtu" data-en="Video clip here">Video klip këtu</span>
+                <small>media/action-1.mp4</small>
+              </div>
+            </div>
+          </div>
+          <div class="action-text">
+            <span class="action-num">01</span>
+            <h3 data-sq="Terapi me kafaz suspension (DMI)" data-en="Suspension cage therapy (DMI)">Terapi me kafaz suspension (DMI)</h3>
+            <p data-sq="Me mbështetje të sigurt, fëmija nxitet të kontrollojë trupin, të forcojë bazën e tij motorike dhe të fitojë besim në lëvizje." data-en="With safe support, the child is encouraged to control their body, strengthen their motor base and gain confidence in movement.">Me mbështetje të sigurt, fëmija nxitet të kontrollojë trupin, të forcojë bazën e tij motorike dhe të fitojë besim në lëvizje.</p>
+          </div>
+        </article>
+
+        <!-- Action 2 -->
+        <article class="action-row action-row--reverse reveal">
+          <div class="action-media">
+            <div class="media-slot" data-media="media/action-2.mp4">
+              <div class="media-placeholder">
+                <span class="media-ico">▶</span>
+                <span data-sq="Video klip këtu" data-en="Video clip here">Video klip këtu</span>
+                <small>media/action-2.mp4</small>
+              </div>
+            </div>
+          </div>
+          <div class="action-text">
+            <span class="action-num">02</span>
+            <h3 data-sq="Ekuilibri &amp; ecja me mbështetje" data-en="Balance &amp; supported gait">Ekuilibri &amp; ecja me mbështetje</h3>
+            <p data-sq="Me rripa dhe mbështetje, punojmë hap pas hapi te ekuilibri, koordinimi dhe modeli i shëndetshëm i ecjes." data-en="With harnesses and support, we work step by step on balance, coordination and a healthy walking pattern.">Me rripa dhe mbështetje, punojmë hap pas hapi te ekuilibri, koordinimi dhe modeli i shëndetshëm i ecjes.</p>
+          </div>
+        </article>
+
+        <!-- Action 3 -->
+        <article class="action-row reveal">
+          <div class="action-media">
+            <div class="media-slot" data-media="media/action-3.mp4">
+              <div class="media-placeholder">
+                <span class="media-ico">▶</span>
+                <span data-sq="Video klip këtu" data-en="Video clip here">Video klip këtu</span>
+                <small>media/action-3.mp4</small>
+              </div>
+            </div>
+          </div>
+          <div class="action-text">
+            <span class="action-num">03</span>
+            <h3 data-sq="Lojë &amp; aftësi motorike" data-en="Play &amp; motor skills">Lojë &amp; aftësi motorike</h3>
+            <p data-sq="Terapia përmes lojës e bën përparimin natyral — fëmija mëson duke u argëtuar dhe zhvillon aftësitë e tij fine motorike." data-en="Play-based therapy makes progress feel natural — the child learns while having fun and develops fine motor skills.">Terapia përmes lojës e bën përparimin natyral — fëmija mëson duke u argëtuar dhe zhvillon aftësitë e tij fine motorike.</p>
+          </div>
+        </article>
+
+        <!-- Action 4 -->
+        <article class="action-row action-row--reverse reveal">
+          <div class="action-media">
+            <div class="media-slot" data-media="media/action-4.mp4">
+              <div class="media-placeholder">
+                <span class="media-ico">▶</span>
+                <span data-sq="Video klip këtu" data-en="Video clip here">Video klip këtu</span>
+                <small>media/action-4.mp4</small>
+              </div>
+            </div>
+          </div>
+          <div class="action-text">
+            <span class="action-num">04</span>
+            <h3 data-sq="Terapi e punës për pavarësi" data-en="Occupational therapy for independence">Terapi e punës për pavarësi</h3>
+            <p data-sq="Nga kapja e lodrave te aktivitetet e përditshme — ndihmojmë fëmijën të bëhet sa më i pavarur dhe i sigurt." data-en="From grasping toys to everyday activities — we help the child become as independent and confident as possible.">Nga kapja e lodrave te aktivitetet e përditshme — ndihmojmë fëmijën të bëhet sa më i pavarur dhe i sigurt.</p>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== APPROACH ===================== -->
+  <section class="approach" id="approach">
+    <div class="container">
+      <div class="section-head reveal">
+        <span class="kicker" data-sq="Qasja jonë" data-en="Our approach">Qasja jonë</span>
+        <h2 data-sq="Pse prindërit na besojnë" data-en="Why parents trust us">Pse prindërit na besojnë</h2>
+      </div>
+      <div class="feature-grid">
+        <div class="feature reveal">
+          <div class="feature-ico">❤️</div>
+          <h3 data-sq="Kujdes me zemër" data-en="Heartfelt care">Kujdes me zemër</h3>
+          <p data-sq="Çdo fëmijë trajtohet me durim, ngrohtësi dhe respekt — si të ishte i yni." data-en="Every child is treated with patience, warmth and respect — as if they were our own.">Çdo fëmijë trajtohet me durim, ngrohtësi dhe respekt — si të ishte i yni.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-ico">🎯</div>
+          <h3 data-sq="Plane individuale" data-en="Individual plans">Plane individuale</h3>
+          <p data-sq="Çdo terapi ndërtohet rreth nevojave specifike dhe objektivave të fëmijës suaj." data-en="Each therapy is built around your child's specific needs and goals.">Çdo terapi ndërtohet rreth nevojave specifike dhe objektivave të fëmijës suaj.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-ico">🎓</div>
+          <h3 data-sq="Ekip profesionist" data-en="Professional team">Ekip profesionist</h3>
+          <p data-sq="Terapistë të kualifikuar (MSc. PhT) me përvojë në rehabilitimin pediatrik." data-en="Qualified therapists (MSc. PhT) experienced in pediatric rehabilitation.">Terapistë të kualifikuar (MSc. PhT) me përvojë në rehabilitimin pediatrik.</p>
+        </div>
+        <div class="feature reveal">
+          <div class="feature-ico">🤝</div>
+          <h3 data-sq="Prindërit pjesë e ekipit" data-en="Parents on the team">Prindërit pjesë e ekipit</h3>
+          <p data-sq="Ju udhëzojmë dhe ju përfshijmë, që përparimi të vazhdojë edhe në shtëpi." data-en="We guide and involve you, so progress continues at home too.">Ju udhëzojmë dhe ju përfshijmë, që përparimi të vazhdojë edhe në shtëpi.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== TEAM ===================== -->
+  <section class="team" id="team">
+    <div class="container team-inner">
+      <div class="team-copy reveal">
+        <span class="kicker" data-sq="Ekipi ynë" data-en="Our team">Ekipi ynë</span>
+        <h2 data-sq="Njerëz që e duan punën e tyre" data-en="People who love what they do">Njerëz që e duan punën e tyre</h2>
+        <p data-sq="Pas çdo buzëqeshjeje fëmije qëndron një ekip i përkushtuar fizioterapistësh dhe terapistësh të punës, që punojnë çdo ditë për zhvillimin dhe mirëqenien e fëmijëve tuaj." data-en="Behind every child's smile is a dedicated team of physiotherapists and occupational therapists working every day for your children's development and wellbeing.">Pas çdo buzëqeshjeje fëmije qëndron një ekip i përkushtuar fizioterapistësh dhe terapistësh të punës, që punojnë çdo ditë për zhvillimin dhe mirëqenien e fëmijëve tuaj.</p>
+        <a href="#contact" class="btn btn-primary" data-sq="Takoni ekipin tonë" data-en="Meet our team">Takoni ekipin tonë</a>
+      </div>
+      <div class="team-media reveal">
+        <!-- MEDIA SLOT: team photo -->
+        <div class="media-slot media-slot--team" data-media="media/team.jpg">
+          <div class="media-placeholder">
+            <span class="media-ico">📷</span>
+            <span data-sq="Foto e ekipit këtu" data-en="Team photo here">Foto e ekipit këtu</span>
+            <small>media/team.jpg</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CTA / CONTACT ===================== -->
+  <section class="contact" id="contact">
+    <div class="container contact-inner reveal">
+      <div class="contact-copy">
+        <h2 data-sq="Gati për hapin e parë?" data-en="Ready for the first step?">Gati për hapin e parë?</h2>
+        <p data-sq="Na kontaktoni për të caktuar një vlerësim fillestar. Jemi këtu për t'ju përgjigjur çdo pyetjeje." data-en="Contact us to schedule an initial assessment. We're here to answer any question.">Na kontaktoni për të caktuar një vlerësim fillestar. Jemi këtu për t'ju përgjigjur çdo pyetjeje.</p>
+
+        <ul class="contact-list">
+          <li>
+            <span class="c-ico">📞</span>
+            <a href="tel:+000000000" data-sq="Telefono / WhatsApp" data-en="Call / WhatsApp">Telefono / WhatsApp</a>
+          </li>
+          <li>
+            <span class="c-ico">📍</span>
+            <a href="https://maps.app.goo.gl/13fVVGRowpg8UYkf8" target="_blank" rel="noopener" data-sq="Shiko lokacionin në hartë" data-en="See location on map">Shiko lokacionin në hartë</a>
+          </li>
+          <li>
+            <span class="c-ico">📸</span>
+            <a href="https://www.instagram.com/zoeclinic_/" target="_blank" rel="noopener">@zoeclinic_</a>
+          </li>
+        </ul>
+      </div>
+
+      <form class="contact-form" id="contactForm" novalidate>
+        <div class="field">
+          <label data-sq="Emri juaj" data-en="Your name">Emri juaj</label>
+          <input type="text" name="name" required />
+        </div>
+        <div class="field">
+          <label data-sq="Telefoni / Email" data-en="Phone / Email">Telefoni / Email</label>
+          <input type="text" name="contact" required />
+        </div>
+        <div class="field">
+          <label data-sq="Mesazhi" data-en="Message">Mesazhi</label>
+          <textarea name="message" rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block" data-sq="Dërgo kërkesën" data-en="Send request">Dërgo kërkesën</button>
+        <p class="form-note" id="formNote" hidden data-sq="Faleminderit! Do t'ju kontaktojmë së shpejti." data-en="Thank you! We'll contact you soon.">Faleminderit! Do t'ju kontaktojmë së shpejti.</p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand brand--footer">
+        <img src="media/profile.jpg" alt="Zoé Clinic" class="brand-logo brand-logo--lg" />
+      </div>
+      <p class="footer-tag" data-sq="Shëndeti i fëmijëve, prioriteti ynë." data-en="Children's health, our priority.">Shëndeti i fëmijëve, prioriteti ynë.</p>
+      <p class="footer-copy">© <span id="year"></span> Zoé Clinic</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
