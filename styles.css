@@ -103,17 +103,17 @@ a { color: inherit; text-decoration: none; }
 .brand-logo--lg { width: 72px; height: 72px; }
 
 .nav { display: flex; gap: 1.8rem; }
-.nav .nav-cta { display: none; }   /* only shown inside the mobile slide-in menu */
 .nav a { font-weight: 600; font-size: .96rem; color: rgba(255,255,255,.92); position: relative; transition: color .2s; }
 .nav a::after { content: ""; position: absolute; left: 0; bottom: -6px; height: 2px; width: 0; background: var(--teal); transition: width .25s; }
 .nav a:hover::after { width: 100%; }
 .scrolled .nav a { color: var(--ink); }
 
 .header-actions { display: flex; align-items: center; gap: .9rem; }
-.lang-toggle { background: rgba(255,255,255,.16); border: 1px solid rgba(255,255,255,.4); color: #fff; border-radius: 999px; padding: .35rem .7rem; font-family: 'Poppins'; font-weight: 600; font-size: .82rem; cursor: pointer; display: flex; gap: .3rem; align-items: center; }
-.scrolled .lang-toggle { background: #eef6f6; border-color: #d6e6e6; color: #5c7682; }
-.lang-opt { opacity: .55; transition: opacity .2s; }
-.lang-opt.active { opacity: 1; color: #fff; }
+.lang-toggle { background: rgba(43,179,189,.14); border: 1px solid var(--teal); color: #fff; border-radius: 999px; padding: .35rem .7rem; font-family: 'Poppins'; font-weight: 600; font-size: .82rem; cursor: pointer; display: flex; gap: .3rem; align-items: center; transition: background .2s, border-color .2s, color .2s; }
+.lang-toggle:hover { background: rgba(43,179,189,.24); }
+.scrolled .lang-toggle { background: var(--teal-soft); border-color: var(--teal); color: var(--teal-deep); }
+.lang-opt { opacity: .5; transition: opacity .2s, color .2s; }
+.lang-opt.active { opacity: 1; color: var(--teal); }
 .scrolled .lang-opt.active { color: var(--teal-deep); }
 .lang-sep { opacity: .4; }
 
@@ -264,8 +264,6 @@ section { padding: 92px 0; position: relative; }
   .nav.open { transform: none; }
   .nav a { color: #fff; font-size: 1.2rem; }
   .scrolled .nav a { color: #fff; }
-  .nav .nav-cta { display: inline-flex; margin-top: .6rem; font-size: 1rem; }
-  .scrolled .nav .nav-cta { color: #fff; }
 
   /* dim backdrop behind the open menu */
   .nav-backdrop { position: fixed; inset: 0; z-index: 55; background: rgba(5,18,28,.55);
@@ -281,7 +279,7 @@ section { padding: 92px 0; position: relative; }
   body.menu-open .menu-btn span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
   .menu-btn span { transition: transform .3s ease, opacity .2s ease, background .3s ease; }
 
-  .header-actions .btn { display: none; }   /* Book CTA lives inside the menu on phones */
+  .header-actions { gap: .6rem; }   /* keep Rezervo visible in the header on phones */
 
   .hero { padding: 104px 0 64px; }
   .hero-stats { gap: 1.6rem 2rem; justify-content: center; }
@@ -305,6 +303,10 @@ section { padding: 92px 0; position: relative; }
 @media (max-width: 380px) {
   .container { width: min(100% - 28px, var(--maxw)); }
   .brand-logo { width: 46px; height: 46px; }
+  /* keep the top row from getting cramped on tiny screens */
+  .header-actions { gap: .5rem; }
+  .lang-toggle { padding: .3rem .55rem; font-size: .76rem; }
+  .btn-sm { padding: .5rem .9rem; font-size: .84rem; }
   .hero h1 { font-size: 2.05rem; }
   .hero-lead { font-size: 1.02rem; }
   .hero-stats strong { font-size: 1.5rem; }
