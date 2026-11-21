@@ -20,11 +20,37 @@
   var menuBtn = document.getElementById('menuBtn');
   var nav = document.getElementById('nav');
   if (menuBtn && nav) {
+    // dim backdrop behind the slide-in menu
+    var backdrop = document.createElement('div');
+    backdrop.className = 'nav-backdrop';
+    document.body.appendChild(backdrop);
+
+    function openMenu() {
+      nav.classList.add('open');
+      backdrop.classList.add('open');
+      document.body.classList.add('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'true');
+    }
+    function closeMenu() {
+      nav.classList.remove('open');
+      backdrop.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }
+
     menuBtn.addEventListener('click', function () {
-      nav.classList.toggle('open');
+      if (nav.classList.contains('open')) closeMenu(); else openMenu();
     });
+    backdrop.addEventListener('click', closeMenu);
     nav.addEventListener('click', function (e) {
-      if (e.target.tagName === 'A') nav.classList.remove('open');
+      if (e.target.tagName === 'A') closeMenu();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
+    });
+    // if the viewport grows back to desktop, make sure nothing stays locked
+    window.addEventListener('resize', function () {
+      if (window.innerWidth > 760) closeMenu();
     });
   }
 
