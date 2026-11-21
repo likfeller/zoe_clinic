@@ -138,15 +138,47 @@
     }
   }
 
-  /* ---------- Contact form (front-end only demo) ---------- */
+  /* ---------- Contact form -> email via FormSubmit (AJAX) ---------- */
   var form = document.getElementById('contactForm');
   var note = document.getElementById('formNote');
+  var errNote = document.getElementById('formError');
+  // AJAX endpoint = the form's action with the /ajax/ path, so the email lives
+  // in one place (the HTML action) and stays in sync.
+  var AJAX_ENDPOINT = form
+    ? form.getAttribute('action').replace('formsubmit.co/', 'formsubmit.co/ajax/')
+    : '';
+
   if (form) {
     form.addEventListener('submit', function (e) {
       e.preventDefault();
       if (!form.checkValidity()) { form.reportValidity(); return; }
-      if (note) note.hidden = false;
-      form.reset();
+
+      var btn = form.querySelector('button[type="submit"]');
+      if (note) note.hidden = true;
+      if (errNote) errNote.hidden = true;
+      if (btn) btn.disabled = true;
+
+      fetch(AJAX_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          var ok = data && (data.success === true || String(data.success) === 'true');
+          if (ok) {
+            if (note) note.hidden = false;
+            form.reset();
+          } else {
+            if (errNote) errNote.hidden = false;
+          }
+        })
+        .catch(function () {
+          if (errNote) errNote.hidden = false;
+        })
+        .finally(function () {
+          if (btn) btn.disabled = false;
+        });
     });
   }
 })();

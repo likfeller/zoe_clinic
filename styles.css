@@ -216,6 +216,11 @@ section { padding: 92px 0; position: relative; }
 .field input, .field textarea { width: 100%; border: 1.5px solid #dce8e8; border-radius: var(--radius-sm); padding: .8rem 1rem; font-family: inherit; font-size: 1rem; background: #f5fafa; color: var(--ink); transition: border .2s, box-shadow .2s; resize: vertical; }
 .field input:focus, .field textarea:focus { outline: none; border-color: var(--teal-deep); box-shadow: 0 0 0 3px rgba(14,111,119,.15); }
 .form-note { margin-top: 1rem; text-align: center; color: var(--teal-deep); font-weight: 700; }
+.form-error { color: #c0392b; }
+/* honeypot spam trap — visually hidden, off-screen, not focusable */
+.hp-field { position: absolute; left: -9999px; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+/* submitting state */
+.contact-form button[disabled] { opacity: .6; cursor: progress; }
 
 /* ===================== FOOTER ===================== */
 .site-footer { padding: 3rem 0; text-align: center; border-top: 1px solid rgba(255,255,255,.08); }
